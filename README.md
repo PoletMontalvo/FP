@@ -1,4 +1,3 @@
-Títulos
 # Título 1
 ## Título 2
 ### Título 3
@@ -16,6 +15,7 @@ Lista Numerada
 3. Tres
 
 **Negirta**
-*Italica texto*  
+_Italica texto_  
 ***Negrita Italica***
 
+![Imagen Programación](https://dinahosting.com/blog/upload/2018/06/lenguajes-de-programaci%C3%B3n-1-1.jpg)
