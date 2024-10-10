@@ -6,7 +6,7 @@
 
 using namespace std;
 
-int main(){
+int main() {
 	// Opersciones Aritméticas
 	int n1 = 10;
 	int n2 = 20;
@@ -68,7 +68,7 @@ int main(){
 	cout << "Resultado resta flotantes: " << f3 << endl;
 
 	// 8. Combinación de números enteros y flotantes
-	f3 = n1 + f1 - n2 / 2.0 + f2  * 1.5;
+	f3 = n1 + f1 - n2 / 2.0 + f2 * 1.5;
 	cout << "Resultado operación mixta enteros y flotantes: " << f3 << endl;
 
 	// 9. Combinación más complejas
@@ -87,7 +87,7 @@ int main(){
 	cout << "Resultado división double: " << f3 << endl;
 
 	// 11. Números negativos
-	int d1 = 7.4;
+	int negInt = -25;
 	float negFloat = -12.3;
 
 	n3 = n1 + negFloat;
@@ -108,6 +108,5 @@ int main(){
 	cout << "Sumar 2.5 a f1: " << f1 << endl;
 	f2 -= 1.2;
 	cout << "Restar 1.2 a f2: " << f2 << endl;
-
 
 }
