@@ -90,13 +90,13 @@ int main() {
 	int negInt = -25;
 	float negFloat = -12.3;
 
-	n3 = n1 + negFloat;
+	n3 = n1 + negInt;
 	cout << "Resultado suma enteros postivo + negativo: " << n3 << endl;
-	n3 = n2 + negFloat;
+	n3 = n2 + negInt;
 	cout << "Resultado resta enteros positivos - negativo: " << n3 << endl;
 	n3 = negFloat - f2;
 	cout << "Resultado resta flotantes negativos - positivos: " << n3 << endl;
-	n3 = negFloat * n2;
+	n3 = negInt * n2;
 	cout << "Resultado multiplicaión entero negativo * positivo: " << n3 << endl;
 
 	// 12. Incrememtos y decremento
@@ -108,5 +108,6 @@ int main() {
 	cout << "Sumar 2.5 a f1: " << f1 << endl;
 	f2 -= 1.2;
 	cout << "Restar 1.2 a f2: " << f2 << endl;
+
 
 }
