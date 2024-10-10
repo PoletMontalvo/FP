@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-	// Opersciones Aritméticas
+	// Operaciones Aritméticas
 	int n1 = 10;
 	int n2 = 20;
 	int n3;
