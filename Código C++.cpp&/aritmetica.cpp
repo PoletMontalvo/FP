@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-	// Operaciones Aritméticas
+	// Opersciones Aritméticas
 	int n1 = 10;
 	int n2 = 20;
 	int n3;
@@ -109,5 +109,16 @@ int main() {
 	f2 -= 1.2;
 	cout << "Restar 1.2 a f2: " << f2 << endl;
 
+	double res = (1.0 / 3) * 3;
+	cout << "Respuesta: " << res << endl;
+
+	int a = 10;
+	int b = 20;
+	int c;
+
+	cout << (n1 > n2) << endl;
+	cout << (n1 < n2) << endl;
+
+	cout << ((n1 + 15) > n2) << endl;
 
 }
