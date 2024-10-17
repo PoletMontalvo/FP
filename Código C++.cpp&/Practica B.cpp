@@ -30,7 +30,7 @@ int main() {
 // 1.4 Escriba el código de un programa que pregunte que calcule la depreciación de un auto con valor de 200,000 pesos donde se depreciará por cinco años, considerando que solo se puede depreciar el 80% del valor original pagado por el vehículo. Imprima en consola el valor de deducción por cada año
     
   float valor=200000, depreciacion, valor80;
-  valor80 = valor*0.8, // 160000
+  valor80 = valor*0.8, // mes: 160000/5 => 32,000
   depreciacion = valor80/5; 
   cout << "Depreciación = " << depreciacion << endl;
 
