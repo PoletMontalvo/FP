@@ -7,7 +7,14 @@
 using namespace std;
 
 int main() {
+	// Enteros
+	int n1 = 10;
+	int n2 = 20;
 
+	// Floats
+	float f1 = 1.5;
+	float f2 = 5.2;
+	
 	cout << boolalpha; //imprime true en lugar de 1
 	bool bb = true;
 	cout << bb << endl;
