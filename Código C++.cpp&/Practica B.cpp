@@ -28,14 +28,19 @@ int main() {
 	cout << "Número en yardas: " << (yardas * 0.9144) << endl;
 
 	//1.4 Escriba el código de un programa que pregunte que calcule la depreciación de un auto con valor de 200, 000 pesos donde se depreciará por cinco años, considerando que solo se puede depreciar el 80 % del valor original pagado por el vehículo.Imprima en consola el valor de deducción por cada año.
-	float valor = 200000, depreciacion, valor80;
+	float valor = 200000;
+	float depreciacion;
+	float valor80;
 	valor80 = valor * 0.8, // mes: 160000/5 => 32,000
-	depreciacion = valor80 / 5;
+		depreciacion = valor80 / 5;
 	cout << "Depreciación = " << depreciacion << endl;
 
 	//1.5 Escriba un cálculo que calcule el porcentaje de deducción de impuestos del salario mensual de 25, 000 pesos, donde este se deducirá un impuesto fijo de 900 pesos, más una parte porcentual de 1.5 % sobre el cálculo de sueldo mensual – 900, Imprima el valor total del impuesto a deducir, y el sueldo neto que recibirá el empleado.
-	float sueldo = 25000, sueldo2, impuesto, sueldoneto;
-	sueldo2 = sueldo - 900;
+	float sueldoMensual = 25000;
+	float sueldo2;
+	float impuesto;
+	float sueldoneto;
+	sueldo2 = sueldoMensual - 900;
 	impuesto = sueldo2 * 0.015;
 	sueldoneto = sueldo2 - impuesto;
 	cout << "Sueldo neto = " << sueldoneto << endl;
@@ -52,16 +57,15 @@ int main() {
 	// 1.7 Comparaciones. Cuál será el resultado de cada comparación y escriba el código e imprima los resultados usando la instrucción cout, NOTA: Las comparaciones encierrelas entre paréntesis.
 	int a = 10, b = 20;
 	cout << boolalpha;
-	cout << (a > b) << endl;
-	cout << (a < b) << endl;
-	cout << (a == b) << endl;
-	cout << (a != b) << endl;
-	cout << ((a + b) > 10) << endl;
-	cout << ((a - b) == 0) << endl;
-	cout << ((a * b) > 500)  << endl;
-	cout << ((a * b) < 100) << endl;
-	cout << ((a - b) - 0) << endl;
-	cout << (a < 20) << endl;
+	cout << "(a < b): " << (a < b) << endl;
+	cout << "(a == b): " << (a == b) << endl;
+	cout << "(a != b): " << (a != b) << endl;
+	cout << "(a + b) > 100: " << ((a + b) > 100) << endl;
+	cout << "(a - b) == 0: " << ((a - b) == 0) << endl;
+	cout << "(a * b) > 500: " << ((a * b) > 500) << endl;
+	cout << "(a * b) < 100: " << ((a * b) < 100) << endl;
+	cout << "(a - b) < 0: " << ((a - b) < 0) << endl;
+	cout << "(a < 20): " << (a < 20) << endl;
 
 	return 0;
 }
