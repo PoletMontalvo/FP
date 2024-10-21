@@ -51,6 +51,24 @@ if (edad > 18)
 else
 {
 	cout << "Menor de edad. " << endl;
+}	
+	
+// 4. Solicitar la temperatura si esta es menor a 10 grados, escribir en pantalla “hace mucho frío”, si la temperatura es entre mayor a 10 grados y menor a 17 grados, escribir en pantalla “hace frío” y por último si es mayor a 17 grados, escribir en pantalla “el clima es templado”.
+int temp;
+cout << "¿Temperatura?: ";
+cin >> temp;
+cout << endl;
+if (temp < 10)
+{
+	cout << "Hace mucho frío. " << endl;
+}
+if (temp >= 10 and temp < 17)
+{
+	cout << "Hace frío." << endl;
+}
+if (temp > 17)
+{
+	cout << "Clima templado. " << endl;
 }
 	
 return 0;
