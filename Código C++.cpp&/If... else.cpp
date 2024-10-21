@@ -70,6 +70,21 @@ if (temp > 17)
 {
 	cout << "Clima templado. " << endl;
 }
+
+// 5. Preguntar si al usuario si está a favor de la paz, guardar en una variable tipo char llamada voto, validar si el voto es ‘S’ o el voto es ‘N’ escribir en pantalla “voto valido” en caso de que sea cualquier otro carácter escribir, “voto invalido”
+char voto = ' ';
+cout << "¿A favor? S/N ";
+cin >> voto;
+if (voto == 's ' 
+	or voto == 'S ' 
+	or voto == 'n ' 
+	or voto == 'N ')
+{
+	cout << "Voto valido " << endl;
+}
+else
+{
+	cout << "Voto invalido " << endl;	
 	
 return 0;
         }
