@@ -39,6 +39,12 @@ int main() {
 	cout << endl; 
 	int promedio;
 	cout << "Promedio: " << (total / 3) << endl;
+	
+	// 1.5 Escriba un cálculo que calcule la propina de un Total, donde le pregunte al usuario por el total de la cuenta, y el porcentaje de propina a aplicar y guardarlo en una variable que se llame Porcentaje y como resultado imprima la cantidad a dar de propina.
+	
+	
+	// 1.6 Escriba el código que solicite un número al usuario y si este número es mayor a 100, que imprima “El número es mayor a 100”, de lo contrario que imprima “El número es menor o igual que 100”
+	//
 
-	return 0;
+	return 0; 
 }
