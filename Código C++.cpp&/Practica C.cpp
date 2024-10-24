@@ -75,7 +75,22 @@ int main() {
 	}
 
 	// 1.8 Escriba un programa que pregunte por el mail del usuario y guardarlo en una variable llamada “Miemail”, y luego que pregunte por un password y se guarde en una variable llamada “Password_Ingresado”, validar si el password es igual a “12345” entonces imprimir “Felicidades password correcto” de otra manera imprimir “Su password es incorrecto”
-
+	int miemail;
+	cout << "Miemail: ";
+	cin >> miemail;
+	count << "Password: ";
+	cin >> password;
+	if (password == 12345)
+	{
+	    cout << "Felicidades, passwordcorrecto. " << endl;
+	}
+	else
+	{
+	    cout "Su passwordes incorrecto. " << endl;
+	}
+	
+	// 1.9 Crear un código que convierta de grados farenheit a grados centígrados, usando una variable llamada Farenheith; basado en la siguiente formula:
+	
 
 	// 1.10 Crear el código que reciba el peso y la estatura del usuario, y calcule la masa corporal en base a la fórmula :
 	double p;
