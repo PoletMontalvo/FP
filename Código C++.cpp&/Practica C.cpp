@@ -75,22 +75,35 @@ int main() {
 	}
 
 	// 1.8 Escriba un programa que pregunte por el mail del usuario y guardarlo en una variable llamada “Miemail”, y luego que pregunte por un password y se guarde en una variable llamada “Password_Ingresado”, validar si el password es igual a “12345” entonces imprimir “Felicidades password correcto” de otra manera imprimir “Su password es incorrecto”
-	int miemail;
-	cout << "Miemail: ";
-	cin >> miemail;
-	count << "Password: ";
-	cin >> password;
-	if (password == 12345)
-	{
-	    cout << "Felicidades, passwordcorrecto. " << endl;
-	}
-	else
-	{
-	    cout "Su passwordes incorrecto. " << endl;
-	}
-	
+    string Miemail;
+    string Password_Ingresado;
+    cout << "Introduce tu email: ";
+    cin >> Miemail;
+    cout << "Introduce tu password: ";
+    cin >> Password_Ingresado;
+    if (Password_Ingresado == "12345") 
+    {
+        cout << "Felicidades, password correcto." << std::endl;
+    } 
+    else 
+    {
+        cout << "Su password es incorrecto." << std::endl;
+    }
+
 	// 1.9 Crear un código que convierta de grados farenheit a grados centígrados, usando una variable llamada Farenheith; basado en la siguiente formula:
-	
+	double Farenheith;
+	cout << "F°: ";
+	cin >> Farenheith;
+	Farenheith = ((Farenheith - 32) * 5 / 9);
+	cout << "C°: " << Farenheith << endl;
+	if (Farenheith == 32)
+	{
+	    cout << "Cero grados centígrados " << endl;
+	}
+	if (Farenheith < 32 or Farenheith > 32)
+	{
+	    cout << Farenheith << "°C " << endl;
+	}
 
 	// 1.10 Crear el código que reciba el peso y la estatura del usuario, y calcule la masa corporal en base a la fórmula :
 	double p;
@@ -104,7 +117,8 @@ int main() {
 	cout << endl;
 	cout << fixed;
 	cout << setprecision(2);
-	mc = p / (estatura * estatura);
+	mc = (estatura * estatura);
+	mc = p / mc;
 	cout << "Masa corporal: " << mc << endl;
 	if (mc < 18.5)
 	{
