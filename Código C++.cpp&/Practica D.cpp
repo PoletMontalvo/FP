@@ -24,3 +24,25 @@ int main() {
 	{
 		cout << "El valor más grande es: " << c << endl;
 	}
+
+	// 1.17 
+
+
+	// 1.18 
+	int hh, ss, mm;
+	cout << "HH: ";
+	cin >> hh;
+	cout << "MM: ";
+	cin >> mm;
+	cout << "SS: ";
+	cin >> ss;
+	cout << "La hora un segundo más tarde: " << hh << ":" << mm << ":" << (ss + 1) << endl;
+
+	// 1.19
+	
+
+	// 1. 20
+	  // a)
+
+	return 0;
+}
