@@ -35,7 +35,7 @@ int main() {
 	{
 		cout << "De máximo a mínimo: " << c << " > " << b << " > " << a << endl;
 	}
-
+	
 	// 1.18 Crear un programa al que le solicitemos la HH, MM, SS y nos calcule la hora dentro de un segundo más tarde. Leeremos las horas, minutos, segundos como números enteros.
 	int hh, ss, mm;
 	cout << "HH: ";
@@ -50,37 +50,31 @@ int main() {
 	}
 	if ((mm == 59) and (ss == 59))
 	{
-		cout << "La hora un segundo más tarde: " << (hh + 1) << ":" << (mm == 00) << ":" << (ss == 00) << endl;
+		cout << "La hora un segundo más tarde: " << (hh + 1) << ":" << "00" << ":" << "00" << endl;
 	}
 	if ((mm < 59) and (ss == 59))
 	{
-		cout << "La hora un segundo más tarde: " << hh << ":" << (mm + 1) << ":" << (ss == 00) << endl;
+		cout << "La hora un segundo más tarde: " << hh << ":" << (mm + 1) << ":" << "00" << endl;
 	}
 
 	// 1.19 Determinar el precio del boleto de ida y vuelta en avión, conociendo la distancia a recorrer y sabiendo que si el número de días de estancia es superior a 7 y la distancia superior a 800 hm el billete tiene una reducción del 30%. El precio por km es de 2.5 dólares.
-	double precio, reduccion = 0.30, distancia, distancia1, distancia2;
-	int dias;
-	cout << "Distancia a recorrer de ida: ";
-	cin >> distancia1;
-	cout << "Diatancia a recorrer de vuelta: ";
-	cin >> distancia2;
-	cout << "Días de estancia: ";
-	cin >> dias;
-	distancia = distancia1 + distancia2;
-	if ((dias > 7) and (distancia > 800))
-	{
-		cout << "Precio de boleto de ida y vuelta: ";
-		precio = distancia * 2.5;
-		reduccion = precio * .30;
-		precio = precio - reduccion;
-		cout << precio << endl;
-	}
-	if ((dias < 7) and (distancia < 800))
-	{
-		cout << "Precio de boleto de ida y vuelta: ";
-		precio = distancia * 2.5;
-		cout << precio << endl;
-	}
+    double precio, reduccion = 0.30, distancia, distancia1, distancia2;
+    int dias;
+    cout << "Distancia a recorrer de ida: ";
+    cin >> distancia1;
+    cout << "Distancia a recorrer de vuelta: ";
+    cin >> distancia2;
+    cout << "Días de estancia: ";
+    cin >> dias;
+    distancia = distancia1 + distancia2;
+    cout << "Precio de boleto de ida y vuelta: ";
+    precio = distancia * 2.5;
+    if ((dias > 7) and (distancia > 800)) 
+    {
+        reduccion = precio * 0.30;
+        precio -= reduccion;
+    }
+    cout << precio << endl;
 
 	// 1. 20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones:
 	  // a) Si un ángulo es igual de 90°
@@ -108,13 +102,46 @@ int main() {
 	{
 		cout << "Por debajo del punto de ebullición del agua." << endl;
 	}
+	
 	// c) Recibir un número
-	int num;
-	cout << "Dame un número: ";
-	cin >> num;
+	int num, totalPositivos = 0, totalNegativos = 0;
+    cout << "Dame un número: ";
+    cin >> num;
+    if (num > 0) 
+    {
+        totalPositivos += num;
+    } 
+    else 
+    {
+        totalNegativos += num;
+    }
+
+    cout << "Total de positivos: " << totalPositivos << endl;
+    cout << "Total de negativos: " << totalNegativos << endl;
 
 	// d) Si "x" es mayor que "y" y "z" es menor que "y", imprimir x.
-	// e) Si la distancia es mayor que 20 y menos que 35.
+	int x, y, z;
+    cout << "Dame el valor de x: ";
+    cin >> x;
+    cout << "Dame el valor de y: ";
+    cin >> y;
+    cout << "Dame el valor de z: ";
+    cin >> z;
+    if ((x > y) and (z < y)) 
+    {
+        cout << "x: " << x << endl;
+    }
+    
+	// e) Si la distancia es mayor que 20 y menor que 35.
+	int distan, tiempo;
+    cout << "Dame la distancia: ";
+    cin >> distan;
+    if ((distan > 20) and (distan < 35)) 
+    {
+        cout << "Dame el tiempo: ";
+        cin >> tiempo;
+        cout << "Tiempo: " << tiempo << endl;
+    }
 
 	return 0;
 }
