@@ -1,5 +1,6 @@
 
 
+
 #include <iostream>
 
 using namespace std;
@@ -24,7 +25,8 @@ int main() {
 	}
 
 	// 1.17 Crear un programa que lea tres números diferentes, A, B, C, e imprime los valores máximo y mínimo. El procedimiento constistirá en comparaciones sucesivas de parejas de números. Cree el algoritmo, diagrama de flujo y código en C#
-	int a, b, c;
+	int a1 = 4, b1 = 5, c1 = 8;
+
 
 
 	// 1.18 Crear un programa al que le solicitemos la HH, MM, SS y nos calcule la hora dentro de un segundo más tarde. Leeremos las horas, minutos, segundos como números enteros.
