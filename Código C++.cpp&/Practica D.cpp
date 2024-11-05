@@ -70,23 +70,23 @@ int main() {
 	}
 
 	// 1.19 Determinar el precio del boleto de ida y vuelta en avión, conociendo la distancia a recorrer y sabiendo que si el número de días de estancia es superior a 7 y la distancia superior a 800 hm el billete tiene una reducción del 30%. El precio por km es de 2.5 dólares.
-    double precio, reduccion = 0.30, distancia, distancia1, distancia2;
-    int dias;
-    cout << "Distancia a recorrer de ida: ";
-    cin >> distancia1;
-    cout << "Distancia a recorrer de vuelta: ";
-    cin >> distancia2;
-    cout << "Días de estancia: ";
-    cin >> dias;
-    distancia = distancia1 + distancia2;
-    cout << "Precio de boleto de ida y vuelta: ";
-    precio = distancia * 2.5;
-    if ((dias > 7) and (distancia > 800)) 
-    {
-        reduccion = precio * 0.30;
-        precio -= reduccion;
-    }
-    cout << precio << endl;
+        double precio, reduccion = 0.30, distancia, distancia1, distancia2;
+        int dias;
+        cout << "Distancia a recorrer de ida: ";
+        cin >> distancia1;
+        cout << "Distancia a recorrer de vuelta: ";
+        cin >> distancia2;
+        cout << "Días de estancia: ";
+        cin >> dias;
+        distancia = distancia1 + distancia2;
+       cout << "Precio de boleto de ida y vuelta: ";
+       precio = distancia * 2.5;
+       if ((dias > 7) and (distancia > 800)) 
+       {
+             reduccion = precio * 0.30;
+             precio -= reduccion;
+       }
+       cout << precio << endl;
 
 	// 1. 20 Escribir las instrucciones apropiadas para cada una de las siguientes condiciones:
 	  // a) Si un ángulo es igual de 90°
@@ -117,43 +117,42 @@ int main() {
 	
 	// c) Recibir un número
 	int num, totalPositivos = 0, totalNegativos = 0;
-    cout << "Dame un número: ";
-    cin >> num;
-    if (num > 0) 
-    {
-        totalPositivos += num;
-    } 
-    else 
-    {
-        totalNegativos += num;
-    }
-
-    cout << "Total de positivos: " << totalPositivos << endl;
-    cout << "Total de negativos: " << totalNegativos << endl;
+        cout << "Dame un número: ";
+        cin >> num;
+        if (num > 0) 
+        {
+            totalPositivos += num;
+        } 
+       else 
+        {
+            totalNegativos += num;
+        }
+        cout << "Total de positivos: " << totalPositivos << endl;
+        cout << "Total de negativos: " << totalNegativos << endl;
 
 	// d) Si "x" es mayor que "y" y "z" es menor que "y", imprimir x.
 	int x, y, z;
-    cout << "Dame el valor de x: ";
-    cin >> x;
-    cout << "Dame el valor de y: ";
-    cin >> y;
-    cout << "Dame el valor de z: ";
-    cin >> z;
-    if ((x > y) and (z < y)) 
-    {
-        cout << "x: " << x << endl;
-    }
+        cout << "Dame el valor de x: ";
+        cin >> x;
+        cout << "Dame el valor de y: ";
+        cin >> y;
+        cout << "Dame el valor de z: ";
+        cin >> z;
+        if ((x > y) and (z < y)) 
+        {
+            cout << "x: " << x << endl;
+        }
     
 	// e) Si la distancia es mayor que 20 y menor que 35.
 	int distan, tiempo;
-    cout << "Dame la distancia: ";
-    cin >> distan;
-    if ((distan > 20) and (distan < 35)) 
-    {
-        cout << "Dame el tiempo: ";
-        cin >> tiempo;
-        cout << "Tiempo: " << tiempo << endl;
-    }
+        cout << "Dame la distancia: ";
+        cin >> distan;
+        if ((distan > 20) and (distan < 35)) 
+        {
+             cout << "Dame el tiempo: ";
+             cin >> tiempo;
+             cout << "Tiempo: " << tiempo << endl;
+        }
 
 	return 0;
 }
