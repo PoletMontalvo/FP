@@ -23,17 +23,29 @@ int main() {
 
 	// 1.17 Crear un programa que lea tres números diferentes, A, B, C, e imprime los valores máximo y mínimo. El procedimiento constistirá en comparaciones sucesivas de parejas de números. Cree el algoritmo, diagrama de flujo y código en C#
 	int a1 = 4, b1 = 5, c1 = 8;
-	if ((a > b) and (a > c) and (b > c))
+	if ((a1 > b1) and (a1 > c1) and (b1 > c1))
 	{
-		cout << "De máximo a mínimo: " << a << " > " << b << " > " << c << endl;
+		cout << "De máximo a mínimo: " << a1 << " > " << b1 << " > " << c1 << endl;
 	}
-	if ((b > a) and (b > c) and (a > c))
+	if ((a1 > b1) and (c1 > b1) and (a1 > c1))
 	{
-		cout << "De máximo a mínimo: " << b << " > " << a << " > " << c << endl;
+	    cout << "De máximo a mínimo: " << a1 << " > " << c1 << " > " << b1 << endl;
 	}
-	if ((c > a) and (c > b) and (b > a))
+	if ((b1 > a1) and (b1 > c1) and (a1 > c1))
 	{
-		cout << "De máximo a mínimo: " << c << " > " << b << " > " << a << endl;
+		cout << "De máximo a mínimo: " << b1 << " > " << a1 << " > " << c1 << endl;
+	}
+	if ((b1 > a1) and (b1 > c1) and (c1 > a1))
+	{
+		cout << "De máximo a mínimo: " << b1 << " > " << c1 << " > " << a1 << endl;
+	}
+	if ((c1 > a1) and (c1 > b1) and (b1 > a1))
+	{
+		cout << "De máximo a mínimo: " << c1 << " > " << b1 << " > " << a1 << endl;
+	}
+	if ((c > b1) and (a1 > b1) and (c1 > a1))
+	{
+		cout << "De máximo a mínimo: " << c1 << " > " << a1 << " > " << b1 << endl;
 	}
 	
 	// 1.18 Crear un programa al que le solicitemos la HH, MM, SS y nos calcule la hora dentro de un segundo más tarde. Leeremos las horas, minutos, segundos como números enteros.
