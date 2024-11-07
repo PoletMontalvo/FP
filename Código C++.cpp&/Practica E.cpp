@@ -200,3 +200,93 @@ while (vida > 0)
 }
   }
 
+
+
+
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    // 1.21
+   
+    string respuesta, SI, NO;
+    do
+    {
+        cout << "Quieres salir del ciclo? [SI/NO]: ";
+        cin >> respuesta;
+    } while (respuesta != "SI");
+
+
+    // 1.22
+    int opcion, numero1, numero2, total;
+    do
+    {
+        cout << "MENU DE OPERACIONES " << endl;
+        cout << "a) Suma de dos operandos " << endl;
+        cout << "b) Resta de dos operandos " << endl;
+        cout << "c) Multiplicación de dos operandos " << endl;
+        cout << "d) Divición de dos operandos " << endl;
+        cout << "e) Residuo de dos operandos " << endl;
+        cout << "s) Salir del menú. " << endl;
+        cin >> opcion;
+
+    switch (opcion)
+    {
+    case 1: 
+        cout << "a) Suma de dos operandos " << endl;
+        cout << "Numero 1: ";
+        cin >> numero1;
+        cout << "Numero 2: ";
+        cin >> numero2;
+        cout << "Total: " << (total = numero1 + numero2) << endl;
+        break;
+    case 2:
+        cout << "b) Resta de dos operandos " << endl;
+        cout << "Numero 1: ";
+        cin >> numero1;
+        cout << "Numero 2: ";
+        cin >> numero2;
+        cout << "Total: " << (total = numero1 - numero2) << endl;
+        break;
+    case 3: 
+        cout << "c) Multiplicación de dos operandos " << endl;
+        cout << "Numero 1: ";
+        cin >> numero1;
+        cout << "Numero 2: ";
+        cin >> numero2;
+        cout << "Total: " << (total = numero1 * numero2) << endl;
+        break;
+    } while (opcion != 's');
+    
+
+
+    // 1.24
+    srand(time(NULL)); //semilla
+    int castigo = 0;
+    int vida = 12;
+    int premio = 0;
+    cout << "Vida inicial: " << vida << endl;
+    while (vida > 0)
+    {
+        //DEDUCIR UNO VIDA
+        vida--;
+        cout << "Costo de ciclo: " << vida << endl;
+        //ver si hay castigo
+        castigo = rand() % 2;
+        if (castigo == 1)
+        {
+            vida = vida - 3;
+            cout << "Castigo: " << vida << endl;
+        }
+        premio = rand() % 2;
+        if (premio == 1)
+        {
+            vida = vida + 3;
+            cout << "Premio: " << vida << endl;
+        }
+        cout << "Vida despues de ciclo: " << vida << endl;
+    }
+}
