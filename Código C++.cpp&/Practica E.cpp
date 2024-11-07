@@ -173,31 +173,30 @@ int main()
   cout<<endl;
 
 
-  srand(time(NULL)); // funciongenera numeros aleatorios en base a la hora
-      int premio, castigo;
-      int vida =12;
-      cout << " Vida al iniio del ciclo: " << vida << endl;
-      do 
-      {
-         vida = vida -1;
-          cout << "consumo de ciclo " << vida << endl;
-          // castigo
-          castigo = rand()% 2;
-          if (castigo == 1)
-          {
-              cout << " Castigo " << endl;
-              vida = vida -3;
-              cout << " vida despues de castigo : " << vida << endl;
-          }
-          premio = rand()% 2;
-          if (premio ==1)
-          {
-              cout << " Premio " << endl;
-              vida = vida +3;
-              cout << " vida despues de premio : " << vida << endl;
-          }
-          cout << "*******************************************" << endl;
-      } while (vida >=0);
-    // ejercicio del corredor
+  srand(time(NULL)); //semilla
+int castigo = 0;
+int vida = 12;
+int premio = 0;
+cout << "Vida inicial: " << vida << endl;
+while (vida > 0) 
+{
+	//DEDUCIR UNO VIDA
+	vida--;
+	cout << "Costo de ciclo: " << vida << endl;
+	//ver si hay castigo
+	castigo = rand() % 2;
+	if (castigo == 1)
+	{
+		vida = vida - 3;
+		cout << "Castigo: " << vida << endl; 
+	}
+	premio = rand() % 2;
+	if (premio == 1)
+	{
+		vida = vida + 3;
+		cout << "Premio: " << vida << endl;
+	}
+	cout << "Vida despues de ciclo: " << vida << endl;
+}
   }
 
