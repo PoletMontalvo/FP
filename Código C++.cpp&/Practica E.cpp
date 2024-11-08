@@ -1,292 +1,182 @@
 #include <iostream>
-#include <iomanip>
-#include <string.h>
-#include <math.h>
+#include <string>
 
 using namespace std;
 
-int main() 
-{
-  string respuesta, SI, NO;
+int main() {
 
-  do
-  {
-    cout << "Quieres salir del ciclo? [SI/NO]: "; 
-    cin >> respuesta;
-    if (respuesta == "SI")
-    {
-      cout << "Ciclo cerrado. "; 
-      cout << endl;
-      break;
-    }
-    else if (respuesta == "NO")
-    {
-      cout << "Continuando ciclo. "; cout << endl;
-    }
-  }while (true);
-  cout << endl;
-
-  
-  // ejercisio 1.22 Menú de operaciones aritmeticas
-  int opcion, n1=0, n2=0, t=0;
-  double n3=0, n4=0, t1=0;
-  do
-  {
-  cout << "MENU DE OPERACIONES " << endl; 
-  cout << endl;
-  cout << "1) Suma de operaciones. " << endl;
-  cout << "2) Resta de operaciones. " << endl;
-  cout << "3) Multiplicasión de operaciones. " << endl;
-  cout << "4) Divición de operaciones. " << endl;
-  cout << "5) Residuo de operaciones. " << endl;
-  cout << "6) Salir del menú. " << endl;
-  cout << "Ingresar una opción: "; cin >> opcion;
-  cout << "La opción ingresada es: " << opcion << endl;
-  cout << endl;
-  switch (opcion)
-    {
-      case 1:
-      cout << "Suma de operaciones." << endl;
-      cout << "Ingresa el primer numero: "; cin >> n3;
-      cout << "Ingresa el segundo numero: "; cin >> n4;
-      t1 = n3 + n4;
-      cout << "El resultado de la suma es: " << t1 << endl;
-      cout << endl;
-      break;
-
-      case 2:
-      cout << "Resta de operandos" << endl;
-      cout << "Ingresa el primer numero: "; cin >> n3;
-      cout << "Ingresa el segundo numero: "; cin >> n4;
-      t1 = n3 - n4;
-      cout << "El resultado de la resta es: " << t1 << endl;
-      cout << endl;
-      break;
-      
-      case 3:
-      cout << "Multiplicasión de operandos" << endl;
-      cout << "Ingresa el primer numero: "; cin >> n3;
-      cout << "Ingresa el segundo numero: "; cin >> n4;
-      t1 = n3 * n4;
-      cout << "El resultado de la multiplicasión es: " << t1 << endl;
-      cout << endl;
-      break;
-      
-      case 4:
-      cout << "Divición de operandos" << endl;
-      cout << "Ingresa el primer numero: "; cin >> n3;
-      cout << "Ingresa el segundo numero: "; cin >> n4;
-      t1 = n3 / n4;
-      cout << "El resultado de la divición es: " << t1 << endl;
-      cout << endl;
-      break;
-      
-      case 5:
-      cout << "Residuo de operandos" << endl;
-      cout << "Ingresa el primer numero: "; cin >> n1;
-      cout << "Ingresa el segundo numero: "; cin >> n2;
-      t = n1 % n2;
-      cout << "El resultado del residuo es: " << t << endl;
-      cout << endl;
-      break;
-      
-      case 6:
-      cout << "Salir del menu. " << endl;
-      cout << endl;
-      break;
-
-      case 7:
-        cout << "Opcion invalida. " << endl;
-        cout << endl;
-      break;
-      
-    }
-}while (opcion != 6);
-
-
-
-  // ejercisio 1.23 Cagero automatico.
-  int inciso;
-  float saldo=3450, retiro=0, restante;
-  string contraseña;
-
-  cout << "Bienvenido a nuestro banco UNITEC. " << endl;
-  cout << "Por favor, ingrese el PIN: "; cin >> contraseña;
-
-  if (contraseña == "1234")
-  {
-    cout << "La contraseña es correcta. " << endl;
-    cout<<endl;
-    
-    do
-      {
-      cout << "CAJERO UNITEC." << endl; 
-      cout << endl;
-      cout << "1) Consulta de saldo. " << endl;
-      cout << "2) Retiro de dinero. " << endl;
-      cout << "3) Cancelar operación. " << endl;
-      cout << "Ingresar una opción: "; cin >> inciso;
-      cout << "La opción ingresada es: " << inciso << endl;
-      cout << endl;
-      switch (inciso)
-        {
-          case 1:
-          cout << "CONSULTA DE SALDO." << endl;
-          cout << "El saldo inicial que dispone es de $3,450.00 pesos. " << endl;
-          cout << endl;
-          break;
-
-          case 2:
-          cout << "RETIRO DE DINERO. " << endl;
-          cout << "Ingrese la cantidad que se desea retirar: $"; cin >> retiro;
-          if (retiro > saldo) 
-          {
-            cout << "Fondos insuficientes. " << endl;
-           break;
-          }
-            else
-          {
-          saldo -= retiro;
-          cout << "Se retiro $" << retiro << " de su cuenta." << endl;
-          restante=3450-retiro;
-          cout << "Su saldo restante es de $" << saldo << endl;
-         break;
-         }break;
-
-          case 3:
-          cout << "CANCELAR OPERACIÓN. " << endl;
-          cout << "Operación cancelada. " << endl;
-          cout << endl;
-          break;
-
-          case 4:
-            cout << "Opcion invalida. " << endl;
-            cout << endl;
-          break;
-        }
-    }while (opcion == 3);
-  }
-  else
-  {
-    cout << "El PIN es incorrecto. " << endl;
-  }
-  cout<<endl;
-
-
-  srand(time(NULL)); //semilla
-int castigo = 0;
-int vida = 12;
-int premio = 0;
-cout << "Vida inicial: " << vida << endl;
-while (vida > 0) 
-{
-	//DEDUCIR UNO VIDA
-	vida--;
-	cout << "Costo de ciclo: " << vida << endl;
-	//ver si hay castigo
-	castigo = rand() % 2;
-	if (castigo == 1)
-	{
-		vida = vida - 3;
-		cout << "Castigo: " << vida << endl; 
-	}
-	premio = rand() % 2;
-	if (premio == 1)
-	{
-		vida = vida + 3;
-		cout << "Premio: " << vida << endl;
-	}
-	cout << "Vida despues de ciclo: " << vida << endl;
-}
-  }
-
-
-
-
-
-#include <iostream>
-
-using namespace std;
-
-int main()
-{
     // 1.21
-   
-    string respuesta, SI, NO;
+    string respuesta;
     do
     {
-        cout << "Quieres salir del ciclo? [SI/NO]: ";
+        cout << "¿Quieres salir del ciclo? [SI/NO]: ";
         cin >> respuesta;
     } while (respuesta != "SI");
+    cout << "Has salido del ciclo." << endl;
 
 
-    // 1.22
-    int opcion, numero1, numero2, total;
+    //1.22
+    char opcion;
+    int numero1, numero2, total;
+
+    do {
+        numero1 = 0;
+        numero2 = 0;
+        total = 0;
+
+        cout << "Menú de operaciones" << endl;
+        cout << endl;
+        cout << "a) Suma de dos operandos" << endl;
+        cout << "b) Resta de dos operandos" << endl;
+        cout << "c) Multiplicación de dos operandos" << endl;
+        cout << "d) División de dos operandos" << endl;
+        cout << "e) Residuo de dos operandos" << endl;
+        cout << "s) Salir del Menú" << endl;
+        cout << "Seleccione una opción: ";
+        cin >> opcion;
+        switch (opcion)
+        {
+        case 'a':
+            cout << "Numero 1: ";
+            cin >> numero1;
+            cout << "Numero 2: ";
+            cin >> numero2;
+            total = numero1 + numero2;
+            cout << "Total: " << total << endl;
+            break;
+        case 'b':
+            cout << "Numero 1: ";
+            cin >> numero1;
+            cout << "Numero 2: ";
+            cin >> numero2;
+            total = numero1 - numero2;
+            cout << "Total: " << total << endl;
+            break;
+        case 'c':
+            cout << "Numero 1: ";
+            cin >> numero1;
+            cout << "Numero 2: ";
+            cin >> numero2;
+            total = numero1 * numero2;
+            cout << "Total: " << total << endl;
+            break;
+        case 'd':
+            cout << "Numero 1: ";
+            cin >> numero1;
+            cout << "Numero 2: ";
+            cin >> numero2;
+            if (numero2 != 0)
+            {
+                total = numero1 / numero2;
+                cout << "Total: " << total << endl;
+            }
+            else
+            {
+                cout << "Error: No se puede dividir por cero." << endl;
+            }
+            break;
+        case 'e':
+            cout << "Numero 1: ";
+            cin >> numero1;
+            cout << "Numero 2: ";
+            cin >> numero2;
+            if (numero2 != 0)
+            {
+                total = numero1 % numero2;
+                cout << "Total: " << total << endl;
+            }
+            else
+            {
+                cout << "Error: No se puede dividir por cero." << endl;
+            }
+            break;
+        case 's':
+            cout << "Saliendo del programa..." << endl;
+            break;
+        default:
+            cout << "Opción no válida. Inténtelo de nuevo." << endl;
+        }
+        cout << endl;
+    } while (opcion != 's');
+
+    // 1.23 
+    string tarjeta;
+    int pin;
+    double saldo = 3450.00;
+    double cantidad;
+    cout << "Menú de operaciones Cajero UNITEC" << endl;
+    cout << "Ingrese su PIN de 4 dígitos: ";
+    cin >> pin;
+    if (pin != 1234)
+    {
+        cout << "PIN invalido. Terminando el proceso..." << endl;
+        return 0;
+
+    }
     do
     {
-        cout << "MENU DE OPERACIONES " << endl;
-        cout << "a) Suma de dos operandos " << endl;
-        cout << "b) Resta de dos operandos " << endl;
-        cout << "c) Multiplicación de dos operandos " << endl;
-        cout << "d) Divición de dos operandos " << endl;
-        cout << "e) Residuo de dos operandos " << endl;
-        cout << "s) Salir del menú. " << endl;
-        cin >> opcion;
+        cout << "Seleccione una opción" << endl;
+        cout << "a) Consulta de saldo" << endl;
+        cout << "b) Retiro" << endl;
+        cout << "c) Cancelar operacion" << endl;
+        cout << "Opción: "; cin >> opcion;
+        switch (opcion)
+        {
+        case 'a':
+            cout << "Su saldo es: " << saldo << " pesos" << endl;
+            break;
+        case 'b':
+            cout << "Ingrese la cantidad a retirar: ";
+            cin >> cantidad;
+            if (cantidad > saldo)
+            {
+                cout << "Fondos insuficientes. Terminando la operación." << endl;
 
-    switch (opcion)
-    {
-    case 1: 
-        cout << "a) Suma de dos operandos " << endl;
-        cout << "Numero 1: ";
-        cin >> numero1;
-        cout << "Numero 2: ";
-        cin >> numero2;
-        cout << "Total: " << (total = numero1 + numero2) << endl;
-        break;
-    case 2:
-        cout << "b) Resta de dos operandos " << endl;
-        cout << "Numero 1: ";
-        cin >> numero1;
-        cout << "Numero 2: ";
-        cin >> numero2;
-        cout << "Total: " << (total = numero1 - numero2) << endl;
-        break;
-    case 3: 
-        cout << "c) Multiplicación de dos operandos " << endl;
-        cout << "Numero 1: ";
-        cin >> numero1;
-        cout << "Numero 2: ";
-        cin >> numero2;
-        cout << "Total: " << (total = numero1 * numero2) << endl;
-        break;
-    } while (opcion != 's');
-    
+            }
+            else
+            {
+                saldo -= cantidad;
+                cout << "Retiro exitoso. Saldo restante: " << saldo << " pesos" << endl;
+            }
+        break; case 'c':
+            cout << "Operación cancelada. Terminando el proceso..." << endl;
+            break;
+        default:
+            cout << "Opción no válida. Inténtelo de nuevo." << endl;
+        }
+        cout << endl;
+    } while (opcion != 'c');
 
-
-    // 1.24
+    //1.24
     srand(time(NULL)); //semilla
     int castigo = 0;
     int vida = 12;
     int premio = 0;
-    cout << "Vida inicial: " << vida << endl;
+    cout << "vida inicial "
+        << vida << endl;
     while (vida > 0)
     {
-        //DEDUCIR UNO VIDA
+        //deducir uno vida
         vida--;
-        cout << "Costo de ciclo: " << vida << endl;
-        //ver si hay castigo
+        cout << "costo de ciclo "
+            << vida << endl;
+        // castigo?
         castigo = rand() % 2;
         if (castigo == 1)
         {
             vida = vida - 3;
-            cout << "Castigo: " << vida << endl;
+            cout << "castigo "
+                << vida << endl;
         }
         premio = rand() % 2;
         if (premio == 1)
         {
             vida = vida + 3;
-            cout << "Premio: " << vida << endl;
+            cout << "premio "
+                << vida << endl;
         }
-        cout << "Vida despues de ciclo: " << vida << endl;
+        cout << "vida despues ciclo "
+            << vida << endl;
     }
+
 }
