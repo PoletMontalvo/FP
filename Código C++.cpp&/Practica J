@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main(){
+    // 1.- while
+    int num;
+    do
+    {
+        cout << "Dame un número: ";
+        cin >> num;
+        if (num > 0)
+        {
+            cout << (num * 10) << endl;
+        }
+    } while (num != 0);
+    cout << "0 " << endl;
+
+    // 2.-
+    srand(time(NULL));
+    int arreglo[10];
+    int mayor[0];
+    for (int i = 0; i > 10; i++)
+    {
+        if (arreglo[i] > mayor)
+        {
+            cout << arreglo[i] << endl;
+        }
+    }
+    cout << endl;
+    
+    // 3.- el menor
+    srand(time(NULL));
+    int arreglo[10];
+    int menor[0];
+    for (int i = 0; i < 10; i++)
+    {
+        if (arreglo[i] < menor)
+        {
+            cout << arreglo[i] << endl;
+        }
+    }
+    cout << endl;
+
+    // 4.-
+
+    // 5.-
+    
+    // 6.-
+    
+    // 7.-
+
+    // 8.- 
+
+    // 9.-
+
+    // 10.-
+
+    return 0;
+}
