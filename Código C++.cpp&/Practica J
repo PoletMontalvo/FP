@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main(){
-    // 1.- while
+int main() {
+    // 1.- 
     int num;
     do
     {
@@ -14,46 +14,30 @@ int main(){
         }
     } while (num != 0);
     cout << "0 " << endl;
-
-    // 2.-
-    srand(time(NULL));
-    int arreglo[10];
-    int mayor[0];
-    for (int i = 0; i > 10; i++)
+    
+    // 2.- 
+    int arreglo[10] = {1, 4, 5, 6, 2, 7, 9, 7, 3, 8};
+    int mayor = arreglo[0];
+    for (int i = 1; i < 10; ++i) 
     {
         if (arreglo[i] > mayor)
         {
-            cout << arreglo[i] << endl;
+            mayor = arreglo[i];
         }
     }
-    cout << endl;
+    cout << "El mayor elemento del arreglo es: " << mayor << endl;
     
-    // 3.- el menor
-    srand(time(NULL));
-    int arreglo[10];
-    int menor[0];
-    for (int i = 0; i < 10; i++)
+    // 3.- 
+    int arreglo1[10] = {1, 4, 5, 6, 2, 7, 9, 7, 3, 8};
+    int menor = arreglo[0];
+    for (int i = 1; i < 10; ++i) 
     {
-        if (arreglo[i] < menor)
+        if (arreglo1[i] < menor) 
         {
-            cout << arreglo[i] << endl;
+            menor = arreglo1[i];
         }
     }
-    cout << endl;
-
-    // 4.-
-
-    // 5.-
-    
-    // 6.-
-    
-    // 7.-
-
-    // 8.- 
-
-    // 9.-
-
-    // 10.-
+    cout << "El menor elemento del arreglo es: " << menor << endl;
 
     return 0;
 }
