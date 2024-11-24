@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    // 1.- 
+    // 1.- Realice el programa en C++ que solicite un número e imprima el numero multiplicado por 10 y esto lo seguirá haciendo hasta que el usuario ingrese un cero. Utilice el arreglo preconstruido.
     int num;
     do
     {
@@ -15,7 +15,7 @@ int main() {
     } while (num != 0);
     cout << "0 " << endl;
     
-    // 2.- 
+    // 2.- Realice el programa en C++ que encuentre el mayor elemento de un arreglo de tipo entero. Utilice el arreglo preconstruido
     int arreglo[10] = {1, 4, 5, 6, 2, 7, 9, 7, 3, 8};
     int mayor = arreglo[0];
     for (int i = 1; i < 10; ++i) 
@@ -27,7 +27,7 @@ int main() {
     }
     cout << "El mayor elemento del arreglo es: " << mayor << endl;
     
-    // 3.- 
+    // 3.- Realice el programa en C++ que encuentre el mayor elemento de un arreglo de tipo entero. Utilice el arreglo preconstruido.
     int arreglo1[10] = {1, 4, 5, 6, 2, 7, 9, 7, 3, 8};
     int menor = arreglo[0];
     for (int i = 1; i < 10; ++i) 
@@ -38,6 +38,136 @@ int main() {
         }
     }
     cout << "El menor elemento del arreglo es: " << menor << endl;
+    
+    // 4.-  Realice el programa en C++ calcule el promedio de los elementos de un arreglo de tipo entero. Utilice el arreglo preconstruido.
+    int arreglo2[10] = {1, 4, 5, 6, 2, 7, 9, 7, 3, 8};
+    int suma = 0;
+    for (int i = 0; i < 10; ++i) 
+    {
+        suma += arreglo2[i];
+    }
+    cout << "El promedio de los elementos del arreglo es: " << suma / 10.0 << endl;
+    
+    // 5.-  Realice el programa en C++ que encuentre el segundo mayor elemento de un arreglo. Utilice arreglo preconstruido.
+    int arreglo3[10] = {1, 4, 5, 6, 2, 7, 9, 7, 3, 8};
+    int mayor1, segundoMayor;
+    if (arreglo3[0] > arreglo3[1]) 
+    {
+        mayor1 = arreglo3[0];
+        segundoMayor = arreglo3[1];
+    } 
+    else 
+    {
+        mayor1 = arreglo3[1];
+        segundoMayor = arreglo3[0];
+    }
+    for (int i = 2; i < 10; ++i) 
+    {
+        if (arreglo3[i] > mayor1) 
+        {
+            segundoMayor = mayor1;
+            mayor1 = arreglo3[i];
+        } 
+        else 
+        if (arreglo3[i] > segundoMayor) 
+        {
+            segundoMayor = arreglo3[i];
+        }
+    }
+    cout << "El segundo mayor elemento del arreglo es: " << segundoMayor << endl;
+    
+    // 6.- Realice el programa en C++ que cuente el número de elementos pares e impares de un arreglo preconstruido.
+    int arreglo4[10] = {1, 4, 5, 6, 2, 7, 9, 7, 3, 8};
+    int pares = 0;
+    int impares = 0;
+    for (int i = 0; i < 10; ++i) 
+    {
+        if (arreglo4[i] % 2 == 0) 
+        {
+            pares++;
+        } 
+        else 
+        {
+            impares++;
+        }
+    }
+    cout << "Número de elementos pares: " << pares << endl;
+    cout << "Número de elementos impares: " << impares << endl;
+    
+    // 7.- Realice el programa en C++ que imprima las tablas de multiplicar del numero solicitado hasta 10 veces.
+    int numero;
+    cout << "Introduce un número para ver su tabla de multiplicar: ";
+    cin >> numero;
+    for (int i = 1; i <= 10; ++i) 
+    {
+        cout << numero << " x " << i << " = " << numero * i << endl;
+    }
+    
+    // 8.- Realice el programa en C++ que encuentre los tres mayores elementos de un arreglo de 1000 elementos generados de forma aleatoria de tipo entero. Utilice el arreglo preconstruido.
+    srand(time(NULL));
+    int arreglo5[1000];
+    int mayorUno = arreglo5[0], mayorDos = arreglo5[0], mayorTres = arreglo5[0];
+    for (int i = 1; i < 1000; ++i) 
+    {
+        if (arreglo5[i] > mayor1) 
+        {
+            mayorTres = mayorDos;
+            mayorDos = mayorUno;
+            mayorUno = arreglo5[i];
+        } 
+        else 
+        if (arreglo5[i] > mayorDos) 
+        {
+            mayorTres = mayorDos;
+            mayorDos = arreglo5[i];
+        } 
+        else 
+        if (arreglo5[i] > mayorTres) 
+        {
+            mayorTres = arreglo5[i];
+        }
+    }
+    cout << "Los tres mayores elementos del arreglo son: " << mayorUno << ", " << mayorDos << ", y " << mayorTres << endl;
+    
+    // 9.- Realice el programa en C++ que encuentre el segundo menor elemento de un arreglo de 1000 elementos de tipo double de forma aleatoria. Utilice el arreglo preconstruido.
+    srand(time(NULL));
+    double arreglo6[1000];
+    double menor1 = arreglo6[0], menor2 = arreglo6[0];
+    for (int i = 1; i < 1000; ++i) 
+    {
+        if (arreglo6[i] < menor1) 
+        {
+            menor2 = menor1;
+            menor1 = arreglo6[i];
+        } 
+        else 
+        if (arreglo6[i] < menor2 && arreglo6[i] != menor1) 
+        {
+            menor2 = arreglo6[i];
+        }
+    }
+    cout << "El segundo menor elemento del arreglo es: " << menor2 << endl;
+    
+    // 10.- Realice el programa en C++ que invierta los valores de un arreglo de 10 elementos de tipo entero de forma aleatoria. Utilice el arreglo preconstruido
+    int arreglo7[10] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    cout << "Arreglo original: ";
+    for (int i = 0; i < 10; ++i) 
+    {
+        cout << arreglo7[i] << " ";
+    }
+    cout << endl;
+    for (int i = 0; i < 5; ++i) 
+    {
+        int temp = arreglo7[i];
+        arreglo7[i] = arreglo7[9 - i];
+        arreglo7[9 - i] = temp;
+    }
+    cout << "Arreglo invertido: ";
+    for (int i = 0; i < 10; ++i) 
+    {
+        cout << arreglo7[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
