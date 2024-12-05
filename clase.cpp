@@ -58,6 +58,7 @@ public:
 };
 class Goblin :public Enemigo
 {
+public:
     Goblin(int vida1, int potencia1):
         Enemigo("Goblin", vida1, potencia1)
     {}
@@ -115,5 +116,10 @@ int main()
     cout << "Nombre: " << link.getId() << endl;
     cout << "Vida: " << link.getVida() << endl;
     cout << "Potencia: " << link.getPotencia() << endl;
+    cout << endl;
+    Orco orco(80, 10);
+    Dragon dragon(300, 80);
+    Goblin goblin(60, 8);
+    cout << "Vida Orco: " << orco.getVida() << endl;
 
 }
